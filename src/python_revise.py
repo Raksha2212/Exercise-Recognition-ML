@@ -63,6 +63,99 @@ marks.reverse()
 print("Reverse:", marks)
 
 """
+Day 02 - Python Lists
+
+Goal:
+Learn how to create, modify and access lists.
+Lists are one of the most important data structures in Python and are
+used extensively in Data Science and Machine Learning.
+
+Author: Raksha Singh
+Project: RepSpeed AI Workout Recognition
+"""
+
+# Creating a list
+numbers = [10, 20, 30]
+
+print("Original List:", numbers)
+
+# Accessing elements
+print("First Element:", numbers[0])
+print("Last Element:", numbers[-1])
+
+# Adding elements
+numbers.append(40)
+print("After append():", numbers)
+
+numbers.insert(1, 99)
+print("After insert():", numbers)
+
+# Removing elements
+numbers.pop()
+print("After pop():", numbers)
+
+numbers.remove(99)
+print("After remove():", numbers)
+
+# Length
+print("Length:", len(numbers))
+
+# Membership
+print(20 in numbers)
+
+# Slicing
+print(numbers[0:2])
+
+# Sorting
+marks = [88, 75, 95, 61]
+marks.sort()
+print("Sorted:", marks)
+
+marks.reverse()
+print("Reverse:", marks)
+
+"""
+Day 03 - Loops
+
+Goal:
+Understand how loops automate repetitive tasks.
+Loops are heavily used while processing datasets.
+
+Author: Raksha Singh
+Project: RepSpeed AI Workout Recognition
+"""
+
+# Loop through a list
+workout = [10, 12, 15, 11, 14]
+
+for reps in workout:
+    print(f"Workout completed: {reps} reps")
+
+print()
+
+# range()
+print("Using range():")
+
+for i in range(5):
+    print(i)
+
+print()
+
+# range(start, stop, step)
+
+for i in range(2, 10, 2):
+    print(i)
+
+print()
+
+# Loop through names
+
+names = ["Raksha", "Riri", "Python"]
+
+for name in names:
+    print(name.upper())
+
+"""
 Day 04 - Functions
 
 Goal:
