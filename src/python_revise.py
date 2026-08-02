@@ -186,3 +186,52 @@ greet_user("Raksha")
 
 result = add(5, 7)
 print(f"Addition Result: {result}")
+
+
+"""
+Day 05 - Decision Making (if, elif, else)
+
+Goal:
+Learn how Python makes decisions based on conditions.
+
+Author: Raksha Singh
+Project: RepSpeed AI Workout Recognition
+"""
+
+# Basic if
+
+age = 21
+
+if age >= 18:
+    print("Adult")
+
+# if-else
+
+marks = 35
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+
+# if-elif-else
+
+score = 82
+
+if score >= 90:
+    print("Grade A")
+elif score >= 75:
+    print("Grade B")
+elif score >= 60:
+    print("Grade C")
+else:
+    print("Needs Improvement")
+
+# AI Example
+
+confidence = 91
+
+if confidence >= 90:
+    print("Prediction Accepted")
+else:
+    print("Prediction Rejected")
