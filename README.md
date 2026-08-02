@@ -144,6 +144,26 @@ Through this project I aim to gain practical experience in:
 
 ---
 
+## Learning Progress
+
+- ✅ Python Basics
+- ✅ Strings
+- ✅ Lists
+- ✅ Loops
+- ✅ Functions
+- ✅ Dictionaries
+- 🔄 Decision Making (if / elif / else)
+- ⬜ Tuples
+- ⬜ Sets
+- ⬜ List Comprehensions
+- ⬜ Modules
+- ⬜ Exception Handling
+- ⬜ File Handling
+- ⬜ NumPy
+- ⬜ Pandas
+- ⬜ Machine Learning
+
+- 
 ## 📄 License
 
 This project is created for educational and portfolio purposes.
