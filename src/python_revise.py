@@ -235,3 +235,45 @@ if confidence >= 90:
     print("Prediction Accepted")
 else:
     print("Prediction Rejected")
+
+"""
+Day 06 - Tuples
+
+Author: Raksha Singh
+Project: RepSpeed AI Workout Recognition
+
+Goal:
+Learn immutable data structures in Python.
+"""
+
+# Creating Tuples
+
+student = ("Raksha", 21, "Somaiya")
+
+print(student)
+
+# Accessing Values
+
+print(student[0])
+
+print(student[-1])
+
+# Slicing
+
+numbers = (10, 20, 30, 40, 50)
+
+print(numbers[1:4])
+
+# count()
+
+numbers = (10, 20, 20, 30)
+
+print(numbers.count(20))
+
+# index()
+
+print(numbers.index(30))
+
+# Tuples are immutable
+
+# numbers[0] = 100   # Uncomment to see the TypeError
