@@ -10,57 +10,6 @@ print(age)
 print(type(name))
 print(type(age))
 
-"""
-Day 02 - Python Lists
-
-Goal:
-Learn how to create, modify and access lists.
-Lists are one of the most important data structures in Python and are
-used extensively in Data Science and Machine Learning.
-
-Author: Raksha Singh
-Project: RepSpeed AI Workout Recognition
-"""
-
-# Creating a list
-numbers = [10, 20, 30]
-
-print("Original List:", numbers)
-
-# Accessing elements
-print("First Element:", numbers[0])
-print("Last Element:", numbers[-1])
-
-# Adding elements
-numbers.append(40)
-print("After append():", numbers)
-
-numbers.insert(1, 99)
-print("After insert():", numbers)
-
-# Removing elements
-numbers.pop()
-print("After pop():", numbers)
-
-numbers.remove(99)
-print("After remove():", numbers)
-
-# Length
-print("Length:", len(numbers))
-
-# Membership
-print(20 in numbers)
-
-# Slicing
-print(numbers[0:2])
-
-# Sorting
-marks = [88, 75, 95, 61]
-marks.sort()
-print("Sorted:", marks)
-
-marks.reverse()
-print("Reverse:", marks)
 
 """
 Day 02 - Python Lists
@@ -277,3 +226,99 @@ print(numbers.index(30))
 # Tuples are immutable
 
 # numbers[0] = 100   # Uncomment to see the TypeError
+
+"""
+=========================================
+Day 07 - Python Core Revision
+
+Author: Raksha Singh
+Project: RepSpeed AI Workout Recognition
+
+Goal:
+Revise all Python concepts learned before
+starting NumPy.
+=========================================
+"""
+
+print("\n========== PYTHON CORE COMPLETED ==========\n")
+
+# Variables
+
+name = "Raksha"
+role = "Future Data Scientist"
+
+print(name)
+print(role)
+
+# String
+
+language = "Python"
+
+print(language.upper())
+print(language[:3])
+
+# List
+
+skills = ["Python", "SQL"]
+
+skills.append("NumPy")
+
+print(skills)
+
+# Dictionary
+
+student = {
+    "name": "Raksha",
+    "age": 21,
+    "college": "Somaiya"
+}
+
+print(student["college"])
+
+# Tuple
+
+coordinates = (19.0760, 72.8777)
+
+print(coordinates)
+
+# Set
+
+unique_numbers = {1,2,2,3,4,4}
+
+print(unique_numbers)
+
+# Function
+
+def square(number):
+    return number * number
+
+print(square(5))
+
+# Loop
+
+for skill in skills:
+    print(skill)
+
+# Decision Making
+
+accuracy = 94
+
+if accuracy >= 90:
+    print("Excellent Model")
+else:
+    print("Needs Improvement")
+
+# Exception Handling
+
+try:
+    number = int("hello")
+except ValueError:
+    print("ValueError handled successfully")
+
+# File Handling
+
+with open("sample.txt", "w") as file:
+    file.write("Python Revision Completed")
+
+print("\nPython Core Successfully Completed!")
+print("Next Topic -> NumPy")
