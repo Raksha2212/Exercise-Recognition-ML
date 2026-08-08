@@ -1,0 +1,230 @@
+"""
+=========================================
+Day 02 - Python Lists
+
+
+Goal:
+Learn how to create, access, modify and
+process lists in Python.
+
+Topics Covered:
+✓ Creating Lists
+✓ Indexing
+✓ Negative Indexing
+✓ Slicing
+✓ append()
+✓ extend()
+✓ insert()
+✓ remove()
+✓ pop()
+✓ len()
+✓ Membership Operator
+✓ sort()
+✓ reverse()
+✓ Looping through Lists
+✓ AI/ML Example
+=========================================
+"""
+
+
+# =========================================
+# CREATING A LIST
+# =========================================
+
+numbers = [10, 20, 30, 40]
+
+print("===== Creating a List =====")
+print(numbers)
+
+
+# =========================================
+# INDEXING
+# =========================================
+
+print("\n===== Indexing =====")
+
+print("First Element:", numbers[0])
+print("Second Element:", numbers[1])
+print("Last Element:", numbers[-1])
+
+
+# =========================================
+# SLICING
+# =========================================
+
+print("\n===== Slicing =====")
+
+print("First two elements:", numbers[0:2])
+
+print("From index 1:", numbers[1:])
+
+print("Up to index 3:", numbers[:3])
+
+print("Reverse:", numbers[::-1])
+
+
+# =========================================
+# APPEND
+# =========================================
+
+print("\n===== append() =====")
+
+numbers.append(50)
+
+print(numbers)
+
+
+# =========================================
+# EXTEND
+# =========================================
+
+print("\n===== extend() =====")
+
+numbers.extend([60, 70])
+
+print(numbers)
+
+
+# =========================================
+# INSERT
+# =========================================
+
+print("\n===== insert() =====")
+
+numbers.insert(1, 99)
+
+print(numbers)
+
+
+# =========================================
+# REMOVE
+# =========================================
+
+print("\n===== remove() =====")
+
+numbers.remove(99)
+
+print(numbers)
+
+
+# =========================================
+# POP
+# =========================================
+
+print("\n===== pop() =====")
+
+removed_value = numbers.pop()
+
+print("Removed:", removed_value)
+print("List:", numbers)
+
+
+# =========================================
+# LENGTH
+# =========================================
+
+print("\n===== len() =====")
+
+print("Number of elements:", len(numbers))
+
+
+# =========================================
+# MEMBERSHIP
+# =========================================
+
+print("\n===== Membership =====")
+
+print(20 in numbers)
+print(100 in numbers)
+
+
+# =========================================
+# SORTING
+# =========================================
+
+print("\n===== sort() =====")
+
+marks = [88, 75, 95, 61, 82]
+
+marks.sort()
+
+print("Ascending:", marks)
+
+
+# =========================================
+# REVERSE
+# =========================================
+
+print("\n===== reverse() =====")
+
+marks.reverse()
+
+print("Reversed:", marks)
+
+
+# =========================================
+# LOOP THROUGH A LIST
+# =========================================
+
+print("\n===== Looping Through a List =====")
+
+workout = [10, 12, 15, 11, 14]
+
+for reps in workout:
+    print(f"Workout completed: {reps} reps")
+
+
+# =========================================
+# LIST WITH STRINGS
+# =========================================
+
+print("\n===== List of Strings =====")
+
+exercises = ["Push-up", "Squat", "Lunge"]
+
+for exercise in exercises:
+    print(exercise)
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+sensor_readings = [0.45, 0.52, 0.61, 0.48, 0.55]
+
+print("Sensor readings:", sensor_readings)
+
+sensor_readings.append(0.63)
+
+print("Updated readings:", sensor_readings)
+
+print("Number of readings:", len(sensor_readings))
+
+
+# =========================================
+# IMPORTANT PROPERTIES OF LISTS
+# =========================================
+
+"""
+Lists are:
+
+✓ Ordered
+✓ Mutable
+✓ Allow duplicate values
+✓ Can contain different data types
+
+Example:
+"""
+
+example = ["Python", 21, 75.5, True]
+
+print("\nMixed List:", example)
+
+
+# =========================================
+# END OF DAY 02
+# =========================================
+
+print("\n✅ Day 02 - Lists Completed!")
