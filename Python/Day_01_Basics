@@ -1,1 +1,22 @@
-#enter everything here
+## Day 01 - Python Basics
+
+### Topics Learned
+
+- Variables
+- Data Types
+- Type Conversion
+- User Input
+- Strings
+- String Methods
+- Arithmetic Operators
+- Comparison Operators
+- Logical Operators
+
+### Outcome
+
+- Learned how Python stores data.
+- Understood different data types.
+- Performed basic type conversions.
+- Practiced string manipulation.
+- Used operators for calculations and comparisons.
+- Built a simple AI-related example using variables.
