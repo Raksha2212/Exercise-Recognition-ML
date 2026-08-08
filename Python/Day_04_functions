@@ -1,0 +1,270 @@
+"""
+=========================================
+Day 04 - Python Functions
+
+Goal:
+Understand how to create reusable blocks
+of code using functions.
+
+Topics Covered:
+✓ Creating functions
+✓ Calling functions
+✓ Parameters
+✓ Arguments
+✓ return
+✓ print() vs return
+✓ Multiple parameters
+✓ Default parameters
+✓ Local variables
+✓ AI/ML example
+=========================================
+"""
+
+
+# =========================================
+# BASIC FUNCTION
+# =========================================
+
+print("===== Basic Function =====")
+
+
+def greet():
+    print("Welcome to the RepSpeed AI Project!")
+
+
+# Calling the function
+
+greet()
+
+
+# =========================================
+# FUNCTION WITH A PARAMETER
+# =========================================
+
+print("\n===== Function with Parameter =====")
+
+
+def greet_user(name):
+    print(f"Hello, {name}!")
+
+
+greet_user("Raksha")
+greet_user("Riri")
+
+
+# =========================================
+# FUNCTION WITH MULTIPLE PARAMETERS
+# =========================================
+
+print("\n===== Multiple Parameters =====")
+
+
+def add(a, b):
+    return a + b
+
+
+result = add(10, 20)
+
+print("Result:", result)
+
+
+# =========================================
+# PRINT VS RETURN
+# =========================================
+
+print("\n===== print() vs return =====")
+
+
+def print_value(value):
+    print(value)
+
+
+def return_value(value):
+    return value
+
+
+print_value(20)
+
+result = return_value(20)
+
+print("Returned value:", result)
+
+
+# =========================================
+# FUNCTION WITH CALCULATION
+# =========================================
+
+print("\n===== Calculation Function =====")
+
+
+def calculate_total(reps, sets):
+    return reps * sets
+
+
+total = calculate_total(15, 3)
+
+print("Total Reps:", total)
+
+
+# =========================================
+# DEFAULT PARAMETER
+# =========================================
+
+print("\n===== Default Parameter =====")
+
+
+def welcome(name="Riri"):
+    print(f"Welcome, {name}!")
+
+
+welcome()
+
+welcome("Raksha")
+
+
+# =========================================
+# MULTIPLE RETURN VALUES
+# =========================================
+
+print("\n===== Multiple Return Values =====")
+
+
+def calculate_stats(numbers):
+
+    total = sum(numbers)
+    count = len(numbers)
+
+    return total, count
+
+
+reps = [10, 12, 15, 20]
+
+total, count = calculate_stats(reps)
+
+print("Total:", total)
+print("Count:", count)
+
+
+# =========================================
+# LOCAL VARIABLE
+# =========================================
+
+print("\n===== Local Variable =====")
+
+
+def workout():
+
+    exercise = "Push-up"
+
+    print("Exercise:", exercise)
+
+
+workout()
+
+# exercise cannot normally be accessed here
+# because it was created inside the function.
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+
+def evaluate_prediction(confidence):
+
+    if confidence >= 90:
+        return "Prediction Accepted"
+
+    return "Prediction Needs Review"
+
+
+result = evaluate_prediction(95)
+
+print(result)
+
+
+result = evaluate_prediction(72)
+
+print(result)
+
+
+# =========================================
+# FUNCTION FOR WORKOUT DATA
+# =========================================
+
+print("\n===== RepSpeed Example =====")
+
+
+def workout_summary(exercise, reps, confidence):
+
+    return (
+        f"Exercise: {exercise} | "
+        f"Reps: {reps} | "
+        f"Confidence: {confidence}%"
+    )
+
+
+summary = workout_summary(
+    "Squat",
+    15,
+    96
+)
+
+print(summary)
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+FUNCTION
+    ↓
+def function_name():
+
+PARAMETER
+    ↓
+Variable written when defining the function.
+
+ARGUMENT
+    ↓
+Actual value passed when calling the function.
+
+Example:
+
+def greet(name):
+    ↑
+    parameter
+
+greet("Riri")
+      ↑
+      argument
+
+
+PRINT vs RETURN
+
+print()
+→ Displays something.
+
+return
+→ Sends a value back to the caller.
+
+
+Example:
+
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+"""
+
+
+# =========================================
+# END OF DAY 04
+# =========================================
+
+print("\n✅ Day 04 - Functions Completed!")
