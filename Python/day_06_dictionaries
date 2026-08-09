@@ -1,0 +1,301 @@
+"""
+=========================================
+Day 06 - Python Dictionaries
+
+Goal:
+Learn how to store data using key-value
+pairs with Python dictionaries.
+
+Topics Covered:
+✓ Creating Dictionaries
+✓ Keys and Values
+✓ Accessing Values
+✓ Adding Items
+✓ Updating Items
+✓ Removing Items
+✓ get()
+✓ keys()
+✓ values()
+✓ items()
+✓ Looping Through Dictionaries
+✓ AI/ML Example
+=========================================
+"""
+
+
+# =========================================
+# CREATING A DICTIONARY
+# =========================================
+
+print("===== Creating a Dictionary =====")
+
+student = {
+    "name": "Raksha",
+    "age": 21,
+    "college": "Somaiya"
+}
+
+print(student)
+
+
+# =========================================
+# ACCESSING VALUES
+# =========================================
+
+print("\n===== Accessing Values =====")
+
+print(student["name"])
+print(student["age"])
+print(student["college"])
+
+
+# =========================================
+# GET()
+# =========================================
+
+print("\n===== get() =====")
+
+print(student.get("name"))
+
+# get() safely handles missing keys
+
+print(student.get("course"))
+
+print(student.get("course", "Not Available"))
+
+
+# =========================================
+# ADDING A NEW KEY-VALUE PAIR
+# =========================================
+
+print("\n===== Adding Data =====")
+
+student["course"] = "Data Science"
+
+print(student)
+
+
+# =========================================
+# UPDATING A VALUE
+# =========================================
+
+print("\n===== Updating Data =====")
+
+student["age"] = 22
+
+print(student)
+
+
+# =========================================
+# UPDATE()
+# =========================================
+
+print("\n===== update() =====")
+
+student.update({
+    "age": 21,
+    "goal": "Data Scientist"
+})
+
+print(student)
+
+
+# =========================================
+# REMOVING DATA
+# =========================================
+
+print("\n===== Removing Data =====")
+
+student.pop("goal")
+
+print(student)
+
+
+# =========================================
+# KEYS()
+# =========================================
+
+print("\n===== keys() =====")
+
+print(student.keys())
+
+
+# =========================================
+# VALUES()
+# =========================================
+
+print("\n===== values() =====")
+
+print(student.values())
+
+
+# =========================================
+# ITEMS()
+# =========================================
+
+print("\n===== items() =====")
+
+print(student.items())
+
+
+# =========================================
+# LOOP THROUGH KEYS
+# =========================================
+
+print("\n===== Loop Through Keys =====")
+
+for key in student:
+    print(key)
+
+
+# =========================================
+# LOOP THROUGH KEY-VALUE PAIRS
+# =========================================
+
+print("\n===== Loop Through Key-Value Pairs =====")
+
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+
+# =========================================
+# NESTED DICTIONARY
+# =========================================
+
+print("\n===== Nested Dictionary =====")
+
+workout = {
+    "exercise": "Squat",
+    "performance": {
+        "reps": 15,
+        "sets": 3,
+        "confidence": 96
+    }
+}
+
+print(workout)
+
+print("Exercise:", workout["exercise"])
+print("Reps:", workout["performance"]["reps"])
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+prediction = {
+    "exercise": "Push-up",
+    "reps": 18,
+    "confidence": 94.5,
+    "status": "Accepted"
+}
+
+print("Exercise:", prediction["exercise"])
+print("Reps:", prediction["reps"])
+print("Confidence:", prediction["confidence"])
+print("Status:", prediction["status"])
+
+
+# =========================================
+# MULTIPLE PREDICTIONS
+# =========================================
+
+print("\n===== Multiple Prediction Records =====")
+
+predictions = [
+    {
+        "exercise": "Push-up",
+        "reps": 18,
+        "confidence": 94
+    },
+    {
+        "exercise": "Squat",
+        "reps": 15,
+        "confidence": 97
+    },
+    {
+        "exercise": "Lunge",
+        "reps": 12,
+        "confidence": 91
+    }
+]
+
+for prediction in predictions:
+
+    print(
+        f"{prediction['exercise']} - "
+        f"{prediction['reps']} reps - "
+        f"{prediction['confidence']}% confidence"
+    )
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+Dictionary
+    ↓
+Key : Value
+
+Example:
+
+"name" : "Raksha"
+  ↑         ↑
+Key       Value
+
+
+Common methods:
+
+keys()
+→ Returns all keys.
+
+values()
+→ Returns all values.
+
+items()
+→ Returns key-value pairs.
+
+get()
+→ Safely retrieves a value.
+
+update()
+→ Adds or updates multiple values.
+
+pop()
+→ Removes a key-value pair.
+
+
+IMPORTANT:
+
+Keys should be unique.
+
+Example:
+
+{
+    "name": "Raksha",
+    "name": "Riri"
+}
+
+The second "name" replaces the first one.
+
+
+Dictionary vs List:
+
+List
+→ Access using index.
+
+Dictionary
+→ Access using key.
+"""
+
+
+# =========================================
+# END OF DAY 06
+# =========================================
+
+print("\n✅ Day 06 - Dictionaries Completed!")
