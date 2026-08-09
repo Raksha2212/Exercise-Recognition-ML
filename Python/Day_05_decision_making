@@ -1,0 +1,247 @@
+"""
+=========================================
+Day 05 - Python Decision Making
+
+
+Goal:
+Learn how Python makes decisions based
+on conditions.
+
+Topics Covered:
+✓ if
+✓ if-else
+✓ if-elif-else
+✓ Comparison Operators
+✓ Logical Operators
+✓ Nested if
+✓ AI/ML decision example
+=========================================
+"""
+
+
+# =========================================
+# BASIC IF
+# =========================================
+
+print("===== Basic if =====")
+
+age = 21
+
+if age >= 18:
+    print("Adult")
+
+
+# =========================================
+# IF-ELSE
+# =========================================
+
+print("\n===== if-else =====")
+
+marks = 35
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+
+
+# =========================================
+# IF-ELIF-ELSE
+# =========================================
+
+print("\n===== if-elif-else =====")
+
+score = 82
+
+if score >= 90:
+    print("Grade A")
+
+elif score >= 75:
+    print("Grade B")
+
+elif score >= 60:
+    print("Grade C")
+
+else:
+    print("Needs Improvement")
+
+
+# =========================================
+# COMPARISON OPERATORS
+# =========================================
+
+print("\n===== Comparison Operators =====")
+
+a = 20
+b = 10
+
+print(a == b)   # Equal to
+print(a != b)   # Not equal to
+print(a > b)    # Greater than
+print(a < b)    # Less than
+print(a >= b)   # Greater than or equal to
+print(a <= b)   # Less than or equal to
+
+
+# =========================================
+# LOGICAL OPERATORS
+# =========================================
+
+print("\n===== Logical Operators =====")
+
+age = 21
+has_id = True
+
+if age >= 18 and has_id:
+    print("Access granted")
+
+
+temperature = 40
+rain = False
+
+if temperature > 35 or rain:
+    print("Weather alert")
+
+
+is_logged_in = False
+
+if not is_logged_in:
+    print("Login required")
+
+
+# =========================================
+# NESTED IF
+# =========================================
+
+print("\n===== Nested if =====")
+
+age = 21
+has_id = True
+
+if age >= 18:
+
+    if has_id:
+        print("Entry allowed")
+
+    else:
+        print("ID required")
+
+else:
+    print("Underage")
+
+
+# =========================================
+# MULTIPLE CONDITIONS
+# =========================================
+
+print("\n===== Multiple Conditions =====")
+
+marks = 85
+attendance = 90
+
+if marks >= 40 and attendance >= 75:
+    print("Eligible")
+
+else:
+    print("Not Eligible")
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+confidence = 91
+
+if confidence >= 90:
+    print("Prediction Accepted")
+
+elif confidence >= 70:
+    print("Prediction Needs Review")
+
+else:
+    print("Prediction Rejected")
+
+
+# =========================================
+# REPSPEED EXAMPLE
+# =========================================
+
+print("\n===== RepSpeed Example =====")
+
+exercise = "Squat"
+reps = 15
+confidence = 96
+
+if confidence >= 90:
+
+    if reps >= 10:
+        print(f"{exercise}: Workout recognized successfully")
+
+    else:
+        print(f"{exercise}: Low repetition count")
+
+else:
+    print("Prediction confidence too low")
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+if
+→ First condition checked.
+
+elif
+→ Another condition checked if the
+  previous condition was False.
+
+else
+→ Runs when all previous conditions
+  are False.
+
+
+Comparison:
+
+==  Equal
+!=  Not equal
+>   Greater than
+<   Less than
+>=  Greater than or equal
+<=  Less than or equal
+
+
+Logical:
+
+and
+→ Both conditions must be True.
+
+or
+→ At least one condition must be True.
+
+not
+→ Reverses True/False.
+
+
+IMPORTANT:
+
+Use == for comparison.
+
+Use = for assignment.
+
+Example:
+
+x = 10       → Assignment
+x == 10      → Comparison
+"""
+
+
+# =========================================
+# END OF DAY 05
+# =========================================
+
+print("\n✅ Day 05 - Decision Making Completed!")
