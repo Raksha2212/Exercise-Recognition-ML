@@ -1,0 +1,309 @@
+"""
+=========================================
+Day 08 - Python Sets
+
+Goal:
+Learn sets and how they are used to store
+unique values.
+
+Topics Covered:
+✓ Creating Sets
+✓ Unique Values
+✓ add()
+✓ update()
+✓ remove()
+✓ discard()
+✓ Membership
+✓ Union
+✓ Intersection
+✓ Difference
+✓ Set Operations
+✓ AI/ML Example
+=========================================
+"""
+
+
+# =========================================
+# CREATING A SET
+# =========================================
+
+print("===== Creating a Set =====")
+
+numbers = {1, 2, 3, 4, 5}
+
+print(numbers)
+
+
+# =========================================
+# DUPLICATE VALUES
+# =========================================
+
+print("\n===== Duplicate Values =====")
+
+numbers = {1, 2, 2, 3, 3, 4, 4}
+
+print(numbers)
+
+
+# =========================================
+# ADD()
+# =========================================
+
+print("\n===== add() =====")
+
+numbers.add(5)
+
+print(numbers)
+
+
+# =========================================
+# UPDATE()
+# =========================================
+
+print("\n===== update() =====")
+
+numbers.update([6, 7, 8])
+
+print(numbers)
+
+
+# =========================================
+# REMOVE()
+# =========================================
+
+print("\n===== remove() =====")
+
+numbers.remove(8)
+
+print(numbers)
+
+
+# =========================================
+# DISCARD()
+# =========================================
+
+print("\n===== discard() =====")
+
+numbers.discard(100)
+
+print(numbers)
+
+"""
+remove()
+→ Gives an error if the value does not exist.
+
+discard()
+→ Does NOT give an error if the value
+  does not exist.
+"""
+
+
+# =========================================
+# MEMBERSHIP
+# =========================================
+
+print("\n===== Membership =====")
+
+print(3 in numbers)
+
+print(100 in numbers)
+
+
+# =========================================
+# SET LENGTH
+# =========================================
+
+print("\n===== len() =====")
+
+print("Number of unique values:", len(numbers))
+
+
+# =========================================
+# UNION
+# =========================================
+
+print("\n===== Union =====")
+
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+
+print(set_a.union(set_b))
+
+
+# =========================================
+# INTERSECTION
+# =========================================
+
+print("\n===== Intersection =====")
+
+print(set_a.intersection(set_b))
+
+
+# =========================================
+# DIFFERENCE
+# =========================================
+
+print("\n===== Difference =====")
+
+print(set_a.difference(set_b))
+
+print(set_b.difference(set_a))
+
+
+# =========================================
+# SYMMETRIC DIFFERENCE
+# =========================================
+
+print("\n===== Symmetric Difference =====")
+
+print(set_a.symmetric_difference(set_b))
+
+
+# =========================================
+# SET OPERATORS
+# =========================================
+
+print("\n===== Set Operators =====")
+
+print(set_a | set_b)   # Union
+
+print(set_a & set_b)   # Intersection
+
+print(set_a - set_b)   # Difference
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+detected_exercises = [
+    "Push-up",
+    "Squat",
+    "Push-up",
+    "Lunge",
+    "Squat"
+]
+
+unique_exercises = set(detected_exercises)
+
+print("Detected exercises:", detected_exercises)
+
+print("Unique exercises:", unique_exercises)
+
+
+# =========================================
+# DATA CLEANING EXAMPLE
+# =========================================
+
+print("\n===== Data Cleaning Example =====")
+
+exercise_labels = [
+    "Squat",
+    "Push-up",
+    "Squat",
+    "Lunge",
+    "Push-up",
+    "Plank"
+]
+
+unique_labels = set(exercise_labels)
+
+print("Original labels:", exercise_labels)
+
+print("Unique labels:", unique_labels)
+
+
+# =========================================
+# SET COMPARISON
+# =========================================
+
+print("\n===== Set Comparison =====")
+
+day1_exercises = {"Squat", "Push-up", "Lunge"}
+
+day2_exercises = {"Squat", "Plank", "Push-up"}
+
+common = day1_exercises & day2_exercises
+
+print("Exercises performed on both days:", common)
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+SET
+→ Stores unique values.
+→ Does not allow duplicates.
+→ Uses {}
+→ Useful for membership testing
+  and removing duplicates.
+
+Important:
+
+Sets are unordered.
+
+Therefore, do not rely on the
+position/index of an element.
+
+Example:
+
+numbers = {10, 20, 30}
+
+You cannot do:
+
+numbers[0]
+
+because sets do not support indexing.
+
+
+Common methods:
+
+add()
+→ Adds one value.
+
+update()
+→ Adds multiple values.
+
+remove()
+→ Removes a value and raises an
+  error if it doesn't exist.
+
+discard()
+→ Removes a value without raising
+  an error if it doesn't exist.
+
+
+Set operations:
+
+Union
+→ All unique values from both sets.
+
+Intersection
+→ Values common to both sets.
+
+Difference
+→ Values present in one set but
+  not the other.
+
+Symmetric Difference
+→ Values that are not common.
+
+
+Use a SET when:
+→ You need unique values.
+→ You need fast membership testing.
+→ You want to remove duplicates.
+"""
+
+
+# =========================================
+# END OF DAY 08
+# =========================================
+
+print("\n✅ Day 08 - Sets Completed!")
