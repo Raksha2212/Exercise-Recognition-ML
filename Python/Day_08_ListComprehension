@@ -1,0 +1,297 @@
+"""
+=========================================
+Day 09 - Python List Comprehensions
+
+Goal:
+Learn a shorter and cleaner way to create
+lists using list comprehensions.
+
+Topics Covered:
+✓ Basic List Comprehension
+✓ List Comprehension with Conditions
+✓ if condition
+✓ if-else condition
+✓ String List Comprehension
+✓ Mathematical Operations
+✓ Filtering Data
+✓ AI/ML Example
+=========================================
+"""
+
+
+# =========================================
+# NORMAL FOR LOOP
+# =========================================
+
+print("===== Normal For Loop =====")
+
+numbers = [1, 2, 3, 4, 5]
+
+squares = []
+
+for number in numbers:
+    squares.append(number ** 2)
+
+print(squares)
+
+
+# =========================================
+# BASIC LIST COMPREHENSION
+# =========================================
+
+print("\n===== Basic List Comprehension =====")
+
+squares = [number ** 2 for number in numbers]
+
+print(squares)
+
+
+# =========================================
+# LIST COMPREHENSION WITH range()
+# =========================================
+
+print("\n===== Using range() =====")
+
+numbers = [number for number in range(1, 6)]
+
+print(numbers)
+
+
+# =========================================
+# EVEN NUMBERS
+# =========================================
+
+print("\n===== Filtering Even Numbers =====")
+
+even_numbers = [
+    number
+    for number in range(1, 11)
+    if number % 2 == 0
+]
+
+print(even_numbers)
+
+
+# =========================================
+# ODD NUMBERS
+# =========================================
+
+print("\n===== Filtering Odd Numbers =====")
+
+odd_numbers = [
+    number
+    for number in range(1, 11)
+    if number % 2 != 0
+]
+
+print(odd_numbers)
+
+
+# =========================================
+# NUMBERS GREATER THAN OR EQUAL TO 80
+# =========================================
+
+print("\n===== Filtering Scores =====")
+
+scores = [45, 67, 82, 91, 56, 88, 73]
+
+top_scores = [
+    score
+    for score in scores
+    if score >= 80
+]
+
+print(top_scores)
+
+
+# =========================================
+# IF-ELSE LIST COMPREHENSION
+# =========================================
+
+print("\n===== if-else List Comprehension =====")
+
+numbers = [1, 2, 3, 4, 5]
+
+labels = [
+    "Even" if number % 2 == 0 else "Odd"
+    for number in numbers
+]
+
+print(labels)
+
+
+# =========================================
+# STRING LIST COMPREHENSION
+# =========================================
+
+print("\n===== String List Comprehension =====")
+
+names = ["raksha", "riri", "python"]
+
+uppercase_names = [
+    name.upper()
+    for name in names
+]
+
+print(uppercase_names)
+
+
+# =========================================
+# STRING FILTERING
+# =========================================
+
+print("\n===== String Filtering =====")
+
+exercises = [
+    "Push-up",
+    "Squat",
+    "Lunge",
+    "Plank"
+]
+
+long_names = [
+    exercise
+    for exercise in exercises
+    if len(exercise) > 5
+]
+
+print(long_names)
+
+
+# =========================================
+# MATHEMATICAL OPERATION
+# =========================================
+
+print("\n===== Mathematical Operation =====")
+
+prices = [100, 200, 300, 400]
+
+discounted_prices = [
+    price * 0.9
+    for price in prices
+]
+
+print(discounted_prices)
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+confidence_scores = [
+    0.91,
+    0.72,
+    0.95,
+    0.63,
+    0.88,
+    0.97
+]
+
+accepted_predictions = [
+    score
+    for score in confidence_scores
+    if score >= 0.90
+]
+
+print("Accepted predictions:", accepted_predictions)
+
+
+# =========================================
+# REPSPEED EXAMPLE
+# =========================================
+
+print("\n===== RepSpeed Example =====")
+
+workout_reps = [10, 15, 8, 20, 12, 6]
+
+valid_reps = [
+    reps
+    for reps in workout_reps
+    if reps >= 10
+]
+
+print("Original reps:", workout_reps)
+
+print("Valid reps:", valid_reps)
+
+
+# =========================================
+# CONVERTING SENSOR VALUES
+# =========================================
+
+print("\n===== Sensor Data Example =====")
+
+sensor_values = [0.45, 0.52, 0.61, 0.48]
+
+percentage_values = [
+    value * 100
+    for value in sensor_values
+]
+
+print(percentage_values)
+
+
+# =========================================
+# IMPORTANT CONCEPT
+# =========================================
+
+"""
+Remember the basic structure:
+
+[expression for item in iterable]
+
+
+Example:
+
+squares = [x ** 2 for x in numbers]
+
+
+With a condition:
+
+[expression for item in iterable if condition]
+
+
+Example:
+
+even = [x for x in numbers if x % 2 == 0]
+
+
+With if-else:
+
+[expression_if_true if condition else expression_if_false
+ for item in iterable]
+
+
+Example:
+
+result = [
+    "Even" if x % 2 == 0 else "Odd"
+    for x in numbers
+]
+
+
+Quick trick:
+
+Read a comprehension from the RIGHT:
+
+for x in numbers
+      ↓
+take each x
+
+if x > 80
+      ↓
+filter it
+
+x
+      ↓
+put x into the new list
+"""
+
+
+# =========================================
+# END OF DAY 09
+# =========================================
+
+print("\n✅ Day 09 - List Comprehensions Completed!")
