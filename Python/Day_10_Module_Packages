@@ -1,0 +1,309 @@
+"""
+=========================================
+Day 10 - Python Modules & Packages
+
+Goal:
+Understand how Python modules and packages
+help organize and reuse code.
+
+Topics Covered:
+✓ Modules
+✓ import
+✓ from ... import
+✓ Aliases
+✓ Built-in modules
+✓ math module
+✓ random module
+✓ Creating your own module
+✓ Packages
+✓ pip
+✓ AI/ML package examples
+=========================================
+"""
+
+
+# =========================================
+# WHAT IS A MODULE?
+# =========================================
+
+"""
+A module is simply a Python file (.py)
+containing reusable code.
+
+Example:
+
+math_tools.py
+
+can be imported into another Python file.
+"""
+
+
+# =========================================
+# IMPORTING A MODULE
+# =========================================
+
+print("===== Importing a Module =====")
+
+import math
+
+print(math.sqrt(25))
+print(math.pi)
+
+
+# =========================================
+# USING DIFFERENT FUNCTIONS FROM math
+# =========================================
+
+print("\n===== math Module =====")
+
+number = 16
+
+print("Square root:", math.sqrt(number))
+print("Power:", math.pow(2, 3))
+print("Ceiling:", math.ceil(4.2))
+print("Floor:", math.floor(4.8))
+
+
+# =========================================
+# FROM ... IMPORT
+# =========================================
+
+print("\n===== from ... import =====")
+
+from math import sqrt
+
+print(sqrt(81))
+
+
+# =========================================
+# IMPORT WITH ALIAS
+# =========================================
+
+print("\n===== Import Alias =====")
+
+import math as m
+
+print(m.sqrt(100))
+
+
+# =========================================
+# RANDOM MODULE
+# =========================================
+
+print("\n===== random Module =====")
+
+import random
+
+random_number = random.randint(1, 10)
+
+print("Random number:", random_number)
+
+
+# =========================================
+# RANDOM CHOICE
+# =========================================
+
+exercises = [
+    "Push-up",
+    "Squat",
+    "Lunge",
+    "Plank"
+]
+
+selected_exercise = random.choice(exercises)
+
+print("Selected exercise:", selected_exercise)
+
+
+# =========================================
+# CREATING YOUR OWN MODULE
+# =========================================
+
+"""
+You can create your own Python module.
+
+Example file:
+
+helper.py
+
+def greet(name):
+    return f"Hello {name}!"
+
+Then in another Python file:
+
+from helper import greet
+
+print(greet("Raksha"))
+
+
+This allows code to be reused instead of
+writing the same function repeatedly.
+"""
+
+
+# =========================================
+# PACKAGES
+# =========================================
+
+"""
+A package is a collection of related
+Python modules.
+
+Example:
+
+project/
+│
+├── main.py
+│
+└── utils/
+    ├── __init__.py
+    ├── data.py
+    └── calculations.py
+
+
+Packages help organize larger projects.
+"""
+
+
+# =========================================
+# PIP
+# =========================================
+
+"""
+pip is Python's package installer.
+
+Example:
+
+pip install pandas
+
+pip install numpy
+
+pip install matplotlib
+
+pip install scikit-learn
+
+Packages can then be imported into Python.
+"""
+
+
+# =========================================
+# DATA SCIENCE EXAMPLES
+# =========================================
+
+print("\n===== Data Science Package Examples =====")
+
+"""
+Common Data Science packages:
+
+NumPy
+→ Numerical computing
+
+Pandas
+→ Data manipulation and analysis
+
+Matplotlib
+→ Data visualization
+
+Seaborn
+→ Statistical visualization
+
+Scikit-learn
+→ Machine Learning
+"""
+
+
+# =========================================
+# COMMON ALIASES
+# =========================================
+
+"""
+Common Data Science import conventions:
+
+import numpy as np
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+"""
+
+
+# =========================================
+# REPSPEED PROJECT STRUCTURE
+# =========================================
+
+"""
+A larger RepSpeed project could eventually
+be organized like this:
+
+RepSpeed/
+│
+├── main.py
+├── train.py
+├── predict.py
+├── dataset.py
+├── utils.py
+│
+└── models/
+    └── workout_model.py
+
+
+Each file can contain a specific part
+of the project.
+"""
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+MODULE
+→ A Python file containing reusable code.
+
+PACKAGE
+→ A collection of related modules.
+
+IMPORT
+→ Brings a module into your program.
+
+ALIAS
+→ A shorter name for an imported module.
+
+Example:
+
+import pandas as pd
+
+pip
+→ Python package installer.
+
+
+Important distinction:
+
+import math
+
+means Python loads the module.
+
+from math import sqrt
+
+means you directly import sqrt.
+
+
+For Data Science, you'll frequently see:
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+"""
+
+
+# =========================================
+# END OF DAY 10
+# =========================================
+
+print("\n✅ Day 10 - Modules & Packages Completed!")
