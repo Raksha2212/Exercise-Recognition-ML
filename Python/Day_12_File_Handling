@@ -1,0 +1,268 @@
+"""
+=========================================
+Day 12 - Python File Handling
+
+Goal:
+Learn how to create, read, write and update
+files using Python.
+
+Topics Covered:
+✓ open()
+✓ with open()
+✓ File modes: r, w, a, x
+✓ read()
+✓ readline()
+✓ readlines()
+✓ write()
+✓ writelines()
+✓ File handling with loops
+✓ FileNotFoundError
+✓ Dataset-style example
+=========================================
+"""
+
+
+# =========================================
+# WRITE TO A FILE
+# =========================================
+
+print("===== Writing to a File =====")
+
+with open("workout_data.txt", "w") as file:
+    file.write("Push-up,15\n")
+    file.write("Squat,20\n")
+    file.write("Lunge,12\n")
+
+print("Data written successfully.")
+
+
+# =========================================
+# READ A FILE
+# =========================================
+
+print("\n===== Reading a File =====")
+
+with open("workout_data.txt", "r") as file:
+    data = file.read()
+
+print(data)
+
+
+# =========================================
+# READLINE()
+# =========================================
+
+print("===== readline() =====")
+
+with open("workout_data.txt", "r") as file:
+    first_line = file.readline()
+
+print("First line:", first_line)
+
+
+# =========================================
+# READLINES()
+# =========================================
+
+print("===== readlines() =====")
+
+with open("workout_data.txt", "r") as file:
+    lines = file.readlines()
+
+print(lines)
+
+
+# =========================================
+# LOOP THROUGH A FILE
+# =========================================
+
+print("===== Loop Through File =====")
+
+with open("workout_data.txt", "r") as file:
+
+    for line in file:
+        print(line.strip())
+
+
+# =========================================
+# APPEND TO A FILE
+# =========================================
+
+print("\n===== Append Mode =====")
+
+with open("workout_data.txt", "a") as file:
+    file.write("Plank,30\n")
+
+print("New workout added.")
+
+
+# =========================================
+# READ UPDATED FILE
+# =========================================
+
+print("\n===== Updated Data =====")
+
+with open("workout_data.txt", "r") as file:
+    data = file.read()
+
+print(data)
+
+
+# =========================================
+# CREATING A NEW FILE
+# =========================================
+
+print("===== Create Mode =====")
+
+try:
+
+    with open("new_workout.txt", "x") as file:
+        file.write("New workout dataset")
+
+    print("New file created.")
+
+except FileExistsError:
+
+    print("File already exists.")
+
+
+# =========================================
+# FILE NOT FOUND
+# =========================================
+
+print("\n===== FileNotFoundError =====")
+
+try:
+
+    with open("missing_dataset.txt", "r") as file:
+        data = file.read()
+
+except FileNotFoundError:
+
+    print("Dataset file was not found.")
+
+
+# =========================================
+# WRITELINES()
+# =========================================
+
+print("\n===== writelines() =====")
+
+workouts = [
+    "Push-up\n",
+    "Squat\n",
+    "Lunge\n",
+    "Plank\n"
+]
+
+with open("exercise_list.txt", "w") as file:
+    file.writelines(workouts)
+
+print("Exercise list created.")
+
+
+# =========================================
+# DATASET-STYLE EXAMPLE
+# =========================================
+
+print("\n===== Dataset Example =====")
+
+dataset = [
+    "Push-up,15,0.95\n",
+    "Squat,20,0.92\n",
+    "Lunge,12,0.89\n"
+]
+
+with open("rep_speed_dataset.csv", "w") as file:
+
+    file.write("exercise,reps,confidence\n")
+    file.writelines(dataset)
+
+print("Dataset created successfully.")
+
+
+# =========================================
+# READING DATASET
+# =========================================
+
+print("\n===== Reading Dataset =====")
+
+with open("rep_speed_dataset.csv", "r") as file:
+
+    for line in file:
+        print(line.strip())
+
+
+# =========================================
+# IMPORTANT FILE MODES
+# =========================================
+
+"""
+Remember:
+
+"r"
+→ Read
+→ File must already exist.
+
+"w"
+→ Write
+→ Creates a new file.
+→ OVERWRITES existing content.
+
+"a"
+→ Append
+→ Adds data to the end.
+→ Does not erase existing content.
+
+"x"
+→ Create
+→ Creates a new file.
+→ Gives an error if the file already exists.
+
+
+IMPORTANT:
+
+Prefer:
+
+with open("file.txt", "r") as file:
+    data = file.read()
+
+instead of manually opening and closing files.
+
+The 'with' statement automatically closes
+the file after the block finishes.
+"""
+
+
+# =========================================
+# FILE HANDLING IN DATA SCIENCE
+# =========================================
+
+"""
+File handling is useful for:
+
+→ Reading datasets
+→ Creating datasets
+→ Updating data
+→ Saving model outputs
+→ Storing logs
+→ Processing text files
+→ Working with CSV files
+
+In Data Science, we will eventually use
+libraries such as Pandas for structured
+datasets:
+
+import pandas as pd
+
+df = pd.read_csv("dataset.csv")
+"""
+
+
+# =========================================
+# END OF PYTHON CORE
+# =========================================
+
+print("\n=========================================")
+print("🎉 PYTHON CORE COMPLETED!")
+print("=========================================")
