@@ -1,0 +1,299 @@
+"""
+=========================================
+Day 11 - Python Exception Handling
+
+Goal:
+Learn how to handle errors without stopping
+the entire Python program.
+
+Topics Covered:
+✓ try
+✓ except
+✓ else
+✓ finally
+✓ ValueError
+✓ TypeError
+✓ ZeroDivisionError
+✓ IndexError
+✓ FileNotFoundError
+✓ Multiple exceptions
+✓ AI/ML example
+=========================================
+"""
+
+
+# =========================================
+# BASIC TRY-EXCEPT
+# =========================================
+
+print("===== Basic Exception Handling =====")
+
+try:
+    number = int("hello")
+
+except ValueError:
+    print("Invalid input. Please enter a number.")
+
+
+# =========================================
+# ZERO DIVISION ERROR
+# =========================================
+
+print("\n===== ZeroDivisionError =====")
+
+try:
+    result = 10 / 0
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+
+# =========================================
+# TYPE ERROR
+# =========================================
+
+print("\n===== TypeError =====")
+
+try:
+    result = "Python" + 10
+
+except TypeError:
+    print("Cannot combine a string and an integer.")
+
+
+# =========================================
+# INDEX ERROR
+# =========================================
+
+print("\n===== IndexError =====")
+
+numbers = [10, 20, 30]
+
+try:
+    print(numbers[5])
+
+except IndexError:
+    print("Index does not exist in the list.")
+
+
+# =========================================
+# FILE NOT FOUND ERROR
+# =========================================
+
+print("\n===== FileNotFoundError =====")
+
+try:
+    with open("missing_file.txt", "r") as file:
+        data = file.read()
+
+except FileNotFoundError:
+    print("The requested file was not found.")
+
+
+# =========================================
+# TRY-EXCEPT-ELSE
+# =========================================
+
+print("\n===== try-except-else =====")
+
+try:
+    number = int("100")
+
+except ValueError:
+    print("Invalid number.")
+
+else:
+    print("Conversion successful:", number)
+
+
+# =========================================
+# TRY-EXCEPT-FINALLY
+# =========================================
+
+print("\n===== try-except-finally =====")
+
+try:
+    number = int("50")
+
+except ValueError:
+    print("Invalid number.")
+
+finally:
+    print("This block always executes.")
+
+
+# =========================================
+# MULTIPLE EXCEPTIONS
+# =========================================
+
+print("\n===== Multiple Exceptions =====")
+
+try:
+    number = int("Python")
+    result = 10 / number
+
+except ValueError:
+    print("ValueError: Invalid number.")
+
+except ZeroDivisionError:
+    print("ZeroDivisionError: Cannot divide by zero.")
+
+
+# =========================================
+# GETTING THE ERROR MESSAGE
+# =========================================
+
+print("\n===== Error Message =====")
+
+try:
+    number = int("abc")
+
+except ValueError as error:
+    print("Error:", error)
+
+
+# =========================================
+# USER INPUT EXAMPLE
+# =========================================
+
+print("\n===== Input Validation =====")
+
+"""
+Uncomment the following section to test
+user input handling.
+
+try:
+    age = int(input("Enter your age: "))
+
+    print(f"Your age is {age}")
+
+except ValueError:
+    print("Please enter a valid number.")
+"""
+
+
+# =========================================
+# AI / ML EXAMPLE
+# =========================================
+
+print("\n===== AI/ML Example =====")
+
+confidence_scores = ["0.95", "0.87", "invalid", "0.91"]
+
+for score in confidence_scores:
+
+    try:
+        confidence = float(score)
+
+        if confidence >= 0.90:
+            print(f"Prediction accepted: {confidence}")
+
+        else:
+            print(f"Prediction needs review: {confidence}")
+
+    except ValueError:
+        print(f"Invalid confidence score: {score}")
+
+
+# =========================================
+# REPSPEED EXAMPLE
+# =========================================
+
+print("\n===== RepSpeed Example =====")
+
+workout_data = [
+    {"exercise": "Squat", "reps": "15"},
+    {"exercise": "Push-up", "reps": "20"},
+    {"exercise": "Lunge", "reps": "invalid"},
+]
+
+for workout in workout_data:
+
+    try:
+        reps = int(workout["reps"])
+
+        print(
+            f"{workout['exercise']}: "
+            f"{reps} reps"
+        )
+
+    except ValueError:
+        print(
+            f"{workout['exercise']}: "
+            "Invalid repetition data"
+        )
+
+
+# =========================================
+# IMPORTANT CONCEPTS
+# =========================================
+
+"""
+Remember:
+
+try
+→ Code that might cause an error.
+
+except
+→ Runs when a specific error occurs.
+
+else
+→ Runs when NO error occurs.
+
+finally
+→ Runs whether an error occurs or not.
+
+
+Common exceptions:
+
+ValueError
+→ Correct type, invalid value.
+
+Example:
+int("hello")
+
+
+TypeError
+→ Operation performed on incompatible types.
+
+Example:
+"Python" + 10
+
+
+ZeroDivisionError
+→ Division by zero.
+
+Example:
+10 / 0
+
+
+IndexError
+→ Index does not exist.
+
+Example:
+numbers[10]
+
+
+FileNotFoundError
+→ Requested file does not exist.
+
+
+IMPORTANT:
+
+Exception handling is especially useful
+when working with real-world datasets because
+data can contain:
+
+→ Missing values
+→ Incorrect formats
+→ Invalid numbers
+→ Unexpected input
+→ Missing files
+"""
+
+
+# =========================================
+# END OF DAY 11
+# =========================================
+
+print("\n✅ Day 11 - Exception Handling Completed!")
